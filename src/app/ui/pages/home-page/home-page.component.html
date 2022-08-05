@@ -1,0 +1,9 @@
+<div class="flex h-screen w-screen flex-col items-center justify-center bg-slate-200">
+  <div class="rounded-lg bg-white p-5 shadow-lg prose overflow-auto mb-16">
+    <h1 class="font-medium leading-tight text-5xl mt-0 mb-2 text-indigo-600">Listado de Frutas</h1>
+    <div class="border-solid border-2 border-indigo-600 mb-2"></div>
+    <section class="overflow-hidden text-gray-700">
+      <app-fruit-short-view [fruitList]="fruitList$ | async"></app-fruit-short-view>
+    </section>
+  </div>
+</div>

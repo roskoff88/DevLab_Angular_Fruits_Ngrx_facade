@@ -1,0 +1,13 @@
+
+<div *ngIf="isContentLoaded; else loading">
+  <div *ngFor="let fruit of currentFruitList"> 
+    <a [routerLink]="['/fruta', fruit!.id]" aria-label="View fruit details">
+      <span class="text-lg text-slate-600 hover:text-blue-600">{{ fruit!.nombre }} - # calorias </span> 
+      <span class="text-red-700 hover:text-red-400 font-bold">{{ fruit!.nutriciones!.calorias }}</span>
+    </a>
+  </div>
+</div>
+
+<ng-template #loading>
+  <p>Loading ...</p>
+ </ng-template>
